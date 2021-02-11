@@ -4,11 +4,25 @@
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
-<!-- Your Code Goes Here -->
+db.mycol.findOne({title: "MongoDB Overview"})
+{
+	"_id" : ObjectId("5dd6542170fb13eec3963bf0"),
+	"title" : "MongoDB Overview",
+	"description" : "MongoDB is no SQL database",
+	"by" : "tutorials point",
+	"url" : "http://www.tutorialspoint.com",
+	"tags" : [
+		"mongodb",
+		"database",
+		"NoSQL"
+	],
+	"likes" : 100
+}
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
-<!-- Your Code Goes Here -->
+db.mycol.find({},{"title":1,_id:0}).limit(1).skip(1)
+{"title":"NoSQL Overview"}
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
